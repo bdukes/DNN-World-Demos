@@ -1,0 +1,219 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="DNNWorld.Messages" type="Module" version="1.0.0">
+      <friendlyName>Messages-Demo</friendlyName>
+      <description>Example of new messages</description>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNNWorld.Messages</moduleName>
+            <foldername>DNN World</foldername>
+            <businessControllerClass />
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Messages</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DNN World/Messages.ascx</controlSrc>
+                    <controlType>View</controlType>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+        <component type="File">
+          <files>
+            <basePath>DesktopModules\DNN World</basePath>
+            <file>
+              <path>Images</path>
+              <name>Chewbacca.jpg</name>
+            </file>
+            <file>
+              <path>Images</path>
+              <name>Darth Vader.jpg</name>
+            </file>
+            <file>
+              <path>Images</path>
+              <name>Mace Windu.jpg</name>
+            </file>
+            <file>
+              <name>Messages.ascx</name>
+            </file>
+            <file>
+              <name>Dialogs.ascx</name>
+            </file>
+            <file>
+              <name>Tabs.ascx</name>
+            </file>
+          </files>
+        </component>
+      </components>
+    </package>
+    <package name="DNNWorld.Tabs" type="Module" version="1.0.0">
+      <friendlyName>Tabs-Demo</friendlyName>
+      <description>Example of new tabs</description>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNNWorld.Tabs</moduleName>
+            <foldername>DNN World</foldername>
+            <businessControllerClass />
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Tabs-Demo</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DNN World/Tabs.ascx</controlSrc>
+                    <controlType>View</controlType>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    <package name="DNNWorld.Panels" type="Module" version="1.0.0">
+      <friendlyName>Panels-Demo</friendlyName>
+      <description>Example of new Panels</description>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNNWorld.Panels</moduleName>
+            <foldername>DNN World</foldername>
+            <businessControllerClass />
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Panels</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DNN World/Panels.ascx</controlSrc>
+                    <controlType>View</controlType>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    <package name="DNNWorld.Buttons" type="Module" version="1.0.0">
+      <friendlyName>Buttons-Demo</friendlyName>
+      <description>Example of new Buttons</description>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNNWorld.Buttons</moduleName>
+            <foldername>DNN World</foldername>
+            <businessControllerClass />
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Buttons</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DNN World/Buttons.ascx</controlSrc>
+                    <controlType>View</controlType>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    <package name="DNNWorld.Tooltips" type="Module" version="1.0.0">
+      <friendlyName>Tooltips-Demo</friendlyName>
+      <description>Example of new Tooltips</description>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNNWorld.Tooltips</moduleName>
+            <foldername>DNN World</foldername>
+            <businessControllerClass />
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Tooltips</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DNN World/Tooltips.ascx</controlSrc>
+                    <controlType>View</controlType>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    <package name="DNNWorld.Dialogs" type="Module" version="1.0.0">
+      <friendlyName>Dialogs-Demo</friendlyName>
+      <description>Example of new Dialogs</description>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNNWorld.Dialogs</moduleName>
+            <foldername>DNN World</foldername>
+            <businessControllerClass />
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Dialogs</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DNN World/Dialogs.ascx</controlSrc>
+                    <controlType>View</controlType>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    <package name="DNNWorld.Icons" type="Module" version="1.0.0">
+      <friendlyName>Icons-Demo</friendlyName>
+      <description>Example of new Icons</description>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNNWorld.Icons</moduleName>
+            <foldername>DNN World</foldername>
+            <businessControllerClass />
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Icons</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DNN World/Icons.ascx</controlSrc>
+                    <controlType>View</controlType>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
