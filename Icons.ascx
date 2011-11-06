@@ -1,30 +1,53 @@
 <%@ Control Language="C#" ClassName="DNNWorld" Inherits="DotNetNuke.Entities.Modules.PortalModuleBase" %>
 <%@ Import Namespace="DotNetNuke.Entities.Icons" %>
 <style type="text/css">
+    #icons-demo ul { clear:left; }
     #icons-demo li { height:95px; float:left; list-style:none; text-align:center; padding: 1em 1em 0; }
         #icons-demo li:nth-child(even) { background-color:#ddd; }
         #icons-demo li.bad-image h3 { color:#e11; }
+    #icons-demo h2 { display:none; }
+    #icons-demo.auth h2 { clear:left; display:block; }
 </style>
 
-<ul id="icons-demo" class="dnnClear">
-    <li><img src="/Icons/Sigma/Add_32x32_Standard.png" alt="Add" /><h3>Add</h3></li>
-    <li><img src="/Icons/Sigma/About_32x32_Standard.png" alt="About" /><h3>About</h3></li>
-    <li><asp:Image runat="server" IconKey="ActionDelete" AlternateText="ActionDelete" /><h3>ActionDelete</h3></li>
-    <li><asp:Image runat="server" IconKey="ActionRefresh" AlternateText="ActionRefresh" /><h3>ActionRefresh</h3></li>
-    <asp:Repeater ID="SmallIconsRepeater" runat="server">
-        <ItemTemplate><li><img src="<%#IconController.IconURL((string)Container.DataItem) %>" alt="<%#Container.DataItem %>" /><h3><%#Container.DataItem %></h3></li></ItemTemplate>
-    </asp:Repeater>
-    <asp:Repeater ID="LargeIconsRepeater" runat="server">
-        <ItemTemplate><li><img src="<%#IconController.IconURL((string)Container.DataItem, IconController.DefaultLargeIconSize)%>" alt="<%#Container.DataItem %>" /><h3><%#Container.DataItem %></h3></li></ItemTemplate>
-    </asp:Repeater>
-    <asp:Repeater ID="IconKeyRepeater" runat="server">
+<div id="icons-demo" class="dnnClear <%= Request.IsAuthenticated ? "auth" : string.Empty %>">
+    <h2><code>IconKey="abc" IconSize="32x32"</code></h2>
+    <ul>
+    <asp:Repeater ID="LargeSizeIconKeyRepeater" runat="server">
         <ItemTemplate><li><asp:Image runat="server" IconSize="32x32" IconKey="<%#Container.DataItem %>" AlternateText="<%#Container.DataItem %>" /><h3><%#Container.DataItem %></h3></li></ItemTemplate>
     </asp:Repeater>
-</ul>
+    </ul>
+    
+    <h2><code>IconKey="abc"</code></h2>
+    <ul>
+    <asp:Repeater ID="DefaultSizeIconKeyRepeater" runat="server">
+        <ItemTemplate><li><asp:Image runat="server" IconKey="<%#Container.DataItem %>" AlternateText="<%#Container.DataItem %>" /><h3><%#Container.DataItem %></h3></li></ItemTemplate>
+    </asp:Repeater>
+    </ul>
+    
+    <h2><code>IconController.IconURL(iconKey, "32x32")</code></h2>
+    <ul>
+    <asp:Repeater ID="LargeSizeIconControllerRepeater" runat="server">
+        <ItemTemplate><li><img src="<%#IconController.IconURL((string)Container.DataItem, IconController.DefaultLargeIconSize)%>" alt="<%#Container.DataItem %>" /><h3><%#Container.DataItem %></h3></li></ItemTemplate>
+    </asp:Repeater>
+    </ul>
+    
+    <h2><code>IconController.IconURL(iconKey)</code></h2>
+    <ul>
+    <asp:Repeater ID="DefaultSizeIconControllerRepeater" runat="server">
+        <ItemTemplate><li><img src="<%#IconController.IconURL((string)Container.DataItem) %>" alt="<%#Container.DataItem %>" /><h3><%#Container.DataItem %></h3></li></ItemTemplate>
+    </asp:Repeater>
+    </ul>
+</div>
 
 <script type="text/javascript">
-    jQuery('#icons-demo img').error(function () {
-        $(this).closest('li').addClass('bad-image');
+    jQuery(function ($) {
+        $('#icons-demo img').error(function () {
+            $(this).closest('li').addClass('bad-image');
+        }).load(function () {
+            $(this).attr('title', function () {
+                return $(this).attr('src') + '\n' + $(this).width() + 'x' + $(this).height();
+            });
+        });
     });
 </script>
 
@@ -33,7 +56,14 @@
     {
         base.OnInit(e);
         
-        SmallIconsRepeater.DataSource = new[] {
+        DefaultSizeIconControllerRepeater.DataSource =
+            LargeSizeIconControllerRepeater.DataSource =
+            DefaultSizeIconKeyRepeater.DataSource =
+            LargeSizeIconKeyRepeater.DataSource = new[] {
+            "Add",
+            "About",
+            "ActionDelete",
+            "ActionRefresh",
             "ActivateLicense",
             "AddFolder",
             "AddFolderDisabled",
@@ -73,8 +103,6 @@
             "EditTab",
             "Email",
             "ExportTab",
-        };
-        LargeIconsRepeater.DataSource = new[] {
             "ExtArj",
             "ExtAsa",
             "ExtAsax",
@@ -132,8 +160,6 @@
             "ExtXls",
             "ExtXml",
             "ExtZip",
-        };
-        IconKeyRepeater.DataSource = new[] {
             "File",
             "Files",
             "Folder",
@@ -229,8 +255,9 @@
             "Whatsnew",
             "Wizard",
         };
-        SmallIconsRepeater.DataBind();
-        LargeIconsRepeater.DataBind();
-        IconKeyRepeater.DataBind();
+        DefaultSizeIconControllerRepeater.DataBind();
+        LargeSizeIconControllerRepeater.DataBind();
+        DefaultSizeIconKeyRepeater.DataBind();
+        LargeSizeIconKeyRepeater.DataBind();
     }
 </script>
