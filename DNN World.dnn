@@ -188,24 +188,24 @@
         </component>
       </components>
     </package>
-    <package name="DNNWorld.Icons" type="Module" version="1.0.0">
-      <friendlyName>Icons-Demo</friendlyName>
-      <description>Example of new Icons</description>
+    <package name="DNNWorld.Form" type="Module" version="1.0.0">
+      <friendlyName>Form-Demo</friendlyName>
+      <description>Example of full form</description>
       <components>
         <component type="Module">
           <desktopModule>
-            <moduleName>DNNWorld.Icons</moduleName>
+            <moduleName>DNNWorld.Form</moduleName>
             <foldername>DNN World</foldername>
             <businessControllerClass />
             <supportedFeatures />
             <moduleDefinitions>
               <moduleDefinition>
-                <friendlyName>Icons</friendlyName>
+                <friendlyName>Form</friendlyName>
                 <defaultCacheTime>0</defaultCacheTime>
                 <moduleControls>
                   <moduleControl>
                     <controlKey />
-                    <controlSrc>DesktopModules/DNN World/Icons.ascx</controlSrc>
+                    <controlSrc>DesktopModules/DNN World/Form.ascx</controlSrc>
                     <controlType>View</controlType>
                   </moduleControl>
                 </moduleControls>
