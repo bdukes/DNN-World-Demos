@@ -10,6 +10,7 @@
     
     <div class="dnnFormItem dnnFormHelp dnnClear">
         <p class="dnnFormRequired"><asp:Label runat="server" ResourceKey="Required Indicator" /></p>
+        <!-- TODO: Accessibility -->
     </div>
 
     <fieldset>
