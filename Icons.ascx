@@ -10,14 +10,14 @@
 </style>
 
 <div id="icons-demo" class="dnnClear <%= Request.IsAuthenticated ? "auth" : string.Empty %>">
-    <h2><code>IconKey="abc" IconSize="32x32"</code></h2>
+    <h2><code>IconKey="Add" IconSize="32x32"</code></h2>
     <ul>
     <asp:Repeater ID="LargeSizeIconKeyRepeater" runat="server">
         <ItemTemplate><li><asp:Image runat="server" IconSize="32x32" IconKey="<%#Container.DataItem %>" AlternateText="<%#Container.DataItem %>" /><h3><%#Container.DataItem %></h3></li></ItemTemplate>
     </asp:Repeater>
     </ul>
     
-    <h2><code>IconKey="abc"</code></h2>
+    <h2><code>IconKey="Add"</code></h2>
     <ul>
     <asp:Repeater ID="DefaultSizeIconKeyRepeater" runat="server">
         <ItemTemplate><li><asp:Image runat="server" IconKey="<%#Container.DataItem %>" AlternateText="<%#Container.DataItem %>" /><h3><%#Container.DataItem %></h3></li></ItemTemplate>
