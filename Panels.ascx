@@ -28,11 +28,18 @@
 
 <script type="text/javascript">
     jQuery(function ($) {
-        $('#panels-demo').dnnPanels();
-        $('#panels-demo .dnnFormExpandContent a').dnnExpandAll({
-            targetArea: '#panels-demo'
+        var setupModule = function () {
+            $('#panels-demo').dnnPanels();
+            $('#panels-demo .dnnFormExpandContent a').dnnExpandAll({
+                targetArea: '#panels-demo'
+            });
+        };
+
+        setupModule();
+
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            setupModule();
         });
-    });
 </script>
 
 <script runat="server">
