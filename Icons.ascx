@@ -45,7 +45,7 @@
             $(this).closest('li').addClass('bad-image');
         }).load(function () {
             $(this).attr('title', function () {
-                return $(this).attr('src') + '\n' + $(this).width() + 'x' + $(this).height();
+                return $(this).attr('src') + '\n\t' + $(this).width() + 'x' + $(this).height();
             });
         });
     });
