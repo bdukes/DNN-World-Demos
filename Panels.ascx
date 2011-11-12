@@ -40,6 +40,7 @@
         Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
             setupModule();
         });
+    });
 </script>
 
 <script runat="server">
